@@ -1,4 +1,6 @@
 import multer from 'multer';
+import { UPLOAD_SIZE_LIMIT } from '@config';
+
 
 const uploadMiddleware = () => {
     console.log(`[Upload] Starting upload in middleware...`);
@@ -21,7 +23,7 @@ const uploadMiddleware = () => {
             cb(null, true)
         },
         limits: {
-            fileSize: 20*1024*1024 //20MB
+            fileSize: parseInt(UPLOAD_SIZE_LIMIT)*1024*1024 //20MB
         }
     }).single('input');
     return upload;

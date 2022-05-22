@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>swagger.yaml</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "swagger.yaml";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>swagger.yaml</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml"><span class="hljs-attr">tags:</span>
+<span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">users</span>
+  <span class="hljs-attr">description:</span> <span class="hljs-string">users</span> <span class="hljs-string">API</span>
+
+<span class="hljs-attr">paths:</span>
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-2" id="section-2"></a>
+</div>
+<p>[GET] users</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml">  <span class="hljs-string">/users:</span>
+    <span class="hljs-attr">get:</span>
+      <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">users</span>
+      <span class="hljs-attr">summary:</span> <span class="hljs-string">Find</span> <span class="hljs-string">All</span> <span class="hljs-string">Users</span>
+      <span class="hljs-attr">responses:</span>
+        <span class="hljs-attr">200:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'OK'</span>
+        <span class="hljs-attr">500:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Server Error'</span>
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-3" id="section-3"></a>
+</div>
+<p>[POST] users</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml">    <span class="hljs-attr">post:</span>
+      <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">users</span>
+      <span class="hljs-attr">summary:</span> <span class="hljs-string">Add</span> <span class="hljs-string">User</span>
+      <span class="hljs-attr">parameters:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">body</span>
+        <span class="hljs-attr">in:</span> <span class="hljs-string">body</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Data</span>
+        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">schema:</span>
+          <span class="hljs-string">$ref:</span> <span class="hljs-string">'#/definitions/users'</span>
+      <span class="hljs-attr">responses:</span>
+        <span class="hljs-attr">201:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Created'</span>
+        <span class="hljs-attr">400:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Bad Request'</span>
+        <span class="hljs-attr">409:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Conflict'</span>
+        <span class="hljs-attr">500:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Server Error'</span>
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-4" id="section-4"></a>
+</div>
+<p>[GET] users/id</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml">  <span class="hljs-string">/users/{id}:</span>
+    <span class="hljs-attr">get:</span>
+      <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">users</span>
+      <span class="hljs-attr">summary:</span> <span class="hljs-string">Find</span> <span class="hljs-string">User</span> <span class="hljs-string">By</span> <span class="hljs-string">Id</span>
+      <span class="hljs-attr">parameters:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">id</span>
+        <span class="hljs-attr">in:</span> <span class="hljs-string">path</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">User</span> <span class="hljs-string">Id</span>
+        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-attr">responses:</span>
+        <span class="hljs-attr">200:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'OK'</span>
+        <span class="hljs-attr">409:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Conflict'</span>
+        <span class="hljs-attr">500:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Server Error'</span>
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-5" id="section-5"></a>
+</div>
+<p>[PUT] users/id</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml">    <span class="hljs-attr">put:</span>
+      <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">users</span>
+      <span class="hljs-attr">summary:</span> <span class="hljs-string">Update</span> <span class="hljs-string">User</span> <span class="hljs-string">By</span> <span class="hljs-string">Id</span>
+      <span class="hljs-attr">parameters:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">id</span>
+        <span class="hljs-attr">in:</span> <span class="hljs-string">path</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Id</span>
+        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">body</span>
+        <span class="hljs-attr">in:</span> <span class="hljs-string">body</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Data</span>
+        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
+        <span class="hljs-attr">schema:</span>
+          <span class="hljs-string">$ref:</span> <span class="hljs-string">'#/definitions/users'</span>
+      <span class="hljs-attr">responses:</span>
+        <span class="hljs-attr">200:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'OK'</span>
+        <span class="hljs-attr">400:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Bad Request'</span>
+        <span class="hljs-attr">409:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Conflict'</span>
+        <span class="hljs-attr">500:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Server Error'</span>
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-6" id="section-6"></a>
+</div>
+<p>[DELETE] users/id</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml">    <span class="hljs-attr">delete:</span>
+      <span class="hljs-attr">tags:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-string">users</span>
+      <span class="hljs-attr">summary:</span> <span class="hljs-string">Delete</span> <span class="hljs-string">User</span> <span class="hljs-string">By</span> <span class="hljs-string">Id</span>
+      <span class="hljs-attr">parameters:</span>
+      <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">id</span>
+        <span class="hljs-attr">in:</span> <span class="hljs-string">path</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Id</span>
+        <span class="hljs-attr">required:</span> <span class="hljs-literal">true</span>
+      <span class="hljs-attr">responses:</span>
+        <span class="hljs-attr">200:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'OK'</span>
+        <span class="hljs-attr">409:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Conflict'</span>
+        <span class="hljs-attr">500:</span>
+          <span class="hljs-attr">description:</span> <span class="hljs-string">'Server Error'</span>
+
+</pre>
+        </td>
+      </tr>
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-7" id="section-7"></a>
+</div>
+<p>definitions</p>
+
+        </td>
+        <td class="code highlight">
+          <pre class="yaml"><span class="hljs-attr">definitions:</span>
+  <span class="hljs-attr">users:</span>
+    <span class="hljs-attr">type:</span> <span class="hljs-string">object</span>
+    <span class="hljs-attr">required:</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">email</span>
+        <span class="hljs-bullet">-</span> <span class="hljs-string">password</span>
+    <span class="hljs-attr">properties:</span>
+      <span class="hljs-attr">email:</span>
+        <span class="hljs-attr">type:</span> <span class="hljs-string">string</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Email</span>
+      <span class="hljs-attr">password:</span>
+        <span class="hljs-attr">type:</span> <span class="hljs-string">string</span>
+        <span class="hljs-attr">description:</span> <span class="hljs-string">user</span> <span class="hljs-string">Password</span>
+
+<span class="hljs-attr">schemes:</span>
+ <span class="hljs-bullet">-</span> <span class="hljs-string">https</span>
+ <span class="hljs-bullet">-</span> <span class="hljs-string">http</span>
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

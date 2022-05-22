@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>package.json</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" media="all" href="doc-style.css" />
+  <script src="doc-filelist.js"></script>
+  <script>
+    var relativeDir = "";
+    var thisFile = "package.json";
+    var defaultSidebar = true;
+  </script>
+  <script src="doc-script.js"></script>
+
+</head>
+<body>
+  <div id="sidebar_wrapper">
+    <div id="sidebar_switch">
+      <span class="tree">Files</span>
+      <span class="headings">Headings</span>
+    </div>
+    <div id="tree"></div>
+    <div id="headings">
+
+    </div>
+  </div>
+  <div id="sidebar-toggle"></div>
+  <div id="container">
+    <div class="background highlight"></div>
+<table cellpadding="0" cellspacing="0">
+  <tbody>
+    
+      <tr>
+        <td class="docs">
+          <h1>package.json</h1>
+        </td>
+        <td class="code highlight"></td>
+      </tr>
+    
+    
+      <tr>
+        <td class="docs">
+          <div class="pilwrap">
+  <a class="pilcrow" href="#section-1" id="section-1"></a>
+</div>
+
+        </td>
+        <td class="code highlight">
+          <pre class="json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"join-elements-backend"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.0"</span>,
+  <span class="hljs-attr">"description"</span>: <span class="hljs-string">"TypeScript + Typegoose + MongoDB + Express API Server"</span>,
+  <span class="hljs-attr">"author"</span>: <span class="hljs-string">""</span>,
+  <span class="hljs-attr">"license"</span>: <span class="hljs-string">"ISC"</span>,
+  <span class="hljs-attr">"scripts"</span>: {
+    <span class="hljs-attr">"start"</span>: <span class="hljs-string">"npm run build &amp;&amp; cross-env NODE_ENV=production node dist/server.js"</span>,
+    <span class="hljs-attr">"dev"</span>: <span class="hljs-string">"cross-env NODE_ENV=development nodemon"</span>,
+    <span class="hljs-attr">"build"</span>: <span class="hljs-string">"swc src -d dist --source-maps --copy-files"</span>,
+    <span class="hljs-attr">"build:tsc"</span>: <span class="hljs-string">"tsc &amp;&amp; tsc-alias"</span>,
+    <span class="hljs-attr">"test"</span>: <span class="hljs-string">"jest --forceExit --detectOpenHandles"</span>,
+    <span class="hljs-attr">"lint"</span>: <span class="hljs-string">"eslint --ignore-path .gitignore --ext .ts src/"</span>,
+    <span class="hljs-attr">"lint:fix"</span>: <span class="hljs-string">"npm run lint -- --fix"</span>,
+    <span class="hljs-attr">"deploy:prod"</span>: <span class="hljs-string">"npm run build &amp;&amp; pm2 start ecosystem.config.js --only prod"</span>,
+    <span class="hljs-attr">"deploy:dev"</span>: <span class="hljs-string">"pm2 start ecosystem.config.js --only dev"</span>
+  },
+  <span class="hljs-attr">"dependencies"</span>: {
+    <span class="hljs-attr">"@typegoose/typegoose"</span>: <span class="hljs-string">"^9.4.0"</span>,
+    <span class="hljs-attr">"axios"</span>: <span class="hljs-string">"^0.27.2"</span>,
+    <span class="hljs-attr">"bcrypt"</span>: <span class="hljs-string">"^5.0.1"</span>,
+    <span class="hljs-attr">"class-transformer"</span>: <span class="hljs-string">"^0.5.1"</span>,
+    <span class="hljs-attr">"class-validator"</span>: <span class="hljs-string">"^0.13.2"</span>,
+    <span class="hljs-attr">"compression"</span>: <span class="hljs-string">"^1.7.4"</span>,
+    <span class="hljs-attr">"cookie-parser"</span>: <span class="hljs-string">"^1.4.5"</span>,
+    <span class="hljs-attr">"cors"</span>: <span class="hljs-string">"^2.8.5"</span>,
+    <span class="hljs-attr">"dotenv"</span>: <span class="hljs-string">"^10.0.0"</span>,
+    <span class="hljs-attr">"envalid"</span>: <span class="hljs-string">"^7.1.0"</span>,
+    <span class="hljs-attr">"express"</span>: <span class="hljs-string">"^4.17.1"</span>,
+    <span class="hljs-attr">"helmet"</span>: <span class="hljs-string">"^4.6.0"</span>,
+    <span class="hljs-attr">"hpp"</span>: <span class="hljs-string">"^0.2.3"</span>,
+    <span class="hljs-attr">"jsonwebtoken"</span>: <span class="hljs-string">"^8.5.1"</span>,
+    <span class="hljs-attr">"mongoose"</span>: <span class="hljs-string">"^6.3.0"</span>,
+    <span class="hljs-attr">"morgan"</span>: <span class="hljs-string">"^1.10.0"</span>,
+    <span class="hljs-attr">"multer"</span>: <span class="hljs-string">"^1.4.4"</span>,
+    <span class="hljs-attr">"reflect-metadata"</span>: <span class="hljs-string">"^0.1.13"</span>,
+    <span class="hljs-attr">"swagger-jsdoc"</span>: <span class="hljs-string">"^6.0.0"</span>,
+    <span class="hljs-attr">"swagger-ui-express"</span>: <span class="hljs-string">"^4.1.6"</span>,
+    <span class="hljs-attr">"winston"</span>: <span class="hljs-string">"^3.3.3"</span>,
+    <span class="hljs-attr">"winston-daily-rotate-file"</span>: <span class="hljs-string">"^4.5.5"</span>
+  },
+  <span class="hljs-attr">"devDependencies"</span>: {
+    <span class="hljs-attr">"@swc/cli"</span>: <span class="hljs-string">"^0.1.51"</span>,
+    <span class="hljs-attr">"@swc/core"</span>: <span class="hljs-string">"^1.2.108"</span>,
+    <span class="hljs-attr">"@types/bcrypt"</span>: <span class="hljs-string">"^5.0.0"</span>,
+    <span class="hljs-attr">"@types/compression"</span>: <span class="hljs-string">"^1.7.1"</span>,
+    <span class="hljs-attr">"@types/cookie-parser"</span>: <span class="hljs-string">"^1.4.2"</span>,
+    <span class="hljs-attr">"@types/cors"</span>: <span class="hljs-string">"^2.8.11"</span>,
+    <span class="hljs-attr">"@types/express"</span>: <span class="hljs-string">"^4.17.13"</span>,
+    <span class="hljs-attr">"@types/hpp"</span>: <span class="hljs-string">"^0.2.1"</span>,
+    <span class="hljs-attr">"@types/jest"</span>: <span class="hljs-string">"27.4.x"</span>,
+    <span class="hljs-attr">"@types/jsonwebtoken"</span>: <span class="hljs-string">"^8.5.4"</span>,
+    <span class="hljs-attr">"@types/mongoose"</span>: <span class="hljs-string">"^5.11.97"</span>,
+    <span class="hljs-attr">"@types/morgan"</span>: <span class="hljs-string">"^1.9.3"</span>,
+    <span class="hljs-attr">"@types/node"</span>: <span class="hljs-string">"^16.0.1"</span>,
+    <span class="hljs-attr">"@types/supertest"</span>: <span class="hljs-string">"^2.0.11"</span>,
+    <span class="hljs-attr">"@types/swagger-jsdoc"</span>: <span class="hljs-string">"^6.0.1"</span>,
+    <span class="hljs-attr">"@types/swagger-ui-express"</span>: <span class="hljs-string">"^4.1.3"</span>,
+    <span class="hljs-attr">"@typescript-eslint/eslint-plugin"</span>: <span class="hljs-string">"^4.28.2"</span>,
+    <span class="hljs-attr">"@typescript-eslint/parser"</span>: <span class="hljs-string">"^4.28.2"</span>,
+    <span class="hljs-attr">"cross-env"</span>: <span class="hljs-string">"^7.0.3"</span>,
+    <span class="hljs-attr">"eslint"</span>: <span class="hljs-string">"^7.30.0"</span>,
+    <span class="hljs-attr">"eslint-config-prettier"</span>: <span class="hljs-string">"^8.3.0"</span>,
+    <span class="hljs-attr">"eslint-plugin-prettier"</span>: <span class="hljs-string">"^3.4.0"</span>,
+    <span class="hljs-attr">"husky"</span>: <span class="hljs-string">"^7.0.1"</span>,
+    <span class="hljs-attr">"jest"</span>: <span class="hljs-string">"27.4.x"</span>,
+    <span class="hljs-attr">"lint-staged"</span>: <span class="hljs-string">"^11.0.0"</span>,
+    <span class="hljs-attr">"node-config"</span>: <span class="hljs-string">"^0.0.2"</span>,
+    <span class="hljs-attr">"node-gyp"</span>: <span class="hljs-string">"^8.1.0"</span>,
+    <span class="hljs-attr">"nodemon"</span>: <span class="hljs-string">"^2.0.9"</span>,
+    <span class="hljs-attr">"pm2"</span>: <span class="hljs-string">"^5.1.0"</span>,
+    <span class="hljs-attr">"prettier"</span>: <span class="hljs-string">"^2.3.2"</span>,
+    <span class="hljs-attr">"supertest"</span>: <span class="hljs-string">"^6.2.2"</span>,
+    <span class="hljs-attr">"ts-jest"</span>: <span class="hljs-string">"^27.1.4"</span>,
+    <span class="hljs-attr">"ts-node"</span>: <span class="hljs-string">"^10.4.0"</span>,
+    <span class="hljs-attr">"tsc-alias"</span>: <span class="hljs-string">"^1.4.1"</span>,
+    <span class="hljs-attr">"tsconfig-paths"</span>: <span class="hljs-string">"^3.10.1"</span>,
+    <span class="hljs-attr">"typescript"</span>: <span class="hljs-string">"^4.6.4"</span>
+  }
+}
+
+</pre>
+        </td>
+      </tr>
+    
+  </tbody>
+</table>
+
+  </div>
+</body>
+</html>

@@ -34,6 +34,10 @@ export class CreateWorkItemDto {
   @IsOptional()
   public email?: string;
 
+  @IsNumber()
+  @IsOptional()
+  public rvtVersion?: number;
+
   @IsString()
   public daWorkItemId: string;
 

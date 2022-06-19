@@ -39,6 +39,9 @@ class WorkItem {
   @prop({ type: String })
   public email?: string;
 
+  @prop({ type: Number})
+  public rvtVersion?: number;
+
   @prop({ type: [DaWorkItem], required: true })
   public daWorkItem: DaWorkItem;
 

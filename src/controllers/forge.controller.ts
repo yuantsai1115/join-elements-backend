@@ -46,7 +46,7 @@ class ForgeController {
         try {
             console.log(`[Forge] Start to create a work item...`);
             const [workItem] = await Promise.all([
-                this.forgeService.createWorkItem(req.body.downloadUrl, req.body.uploadUrl)
+                this.forgeService.createWorkItem(req.body.downloadUrl, req.body.uploadUrl, req.body.rvtVersion)
             ]);
             res.status(200).json({ status: 200, data: {daWorkItemId: workItem.daWorkItemId, daWorkItem: workItem.daWorkItem}, message: 'create work item succeed' });
         } catch (error) {

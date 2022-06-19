@@ -66,12 +66,13 @@ class WorkItemsController {
       console.log(`[Forge] upload file succeed`);
 
       console.log(`[Forge] creating a work item`);
-      const forgeWorkItemData = await this.forgeService.createWorkItem(downloadUrlData.signedUrl, uploadUrlData.signedUrl);
+      const forgeWorkItemData = await this.forgeService.createWorkItem(downloadUrlData.signedUrl, uploadUrlData.signedUrl, req.body.rvtVersion);
       console.log(forgeWorkItemData);
 
       console.log(`[DB] creating a work item`);
       const workItemData = {
         email: req.body.email,
+        rvtVersion: req.body.rvtVersion,
         daWorkItemId: forgeWorkItemData.daWorkItemId,
         daWorkItem: forgeWorkItemData.daWorkItem
       } as WorkItem;

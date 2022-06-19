@@ -1,4 +1,4 @@
-import { FORGE_BASE_URL, FORGE_CLIENT_ID, FORGE_CLIENT_SECRET, FORGE_OSS_BUCKET_KEY, FORGE_DAS_API_ROOT, FORGE_ACTIVITY_ID } from '@config';
+import { FORGE_BASE_URL, FORGE_CLIENT_ID, FORGE_CLIENT_SECRET, FORGE_OSS_BUCKET_KEY, FORGE_DAS_API_ROOT, FORGE_ACTIVITY_ID, FORGE_ACTIVITY_ID_2020, FORGE_ACTIVITY_ID_2021, FORGE_ACTIVITY_ID_2022 } from '@config';
 import axios from 'axios';
 import { readBodyAsBuffer } from '@utils/util';
 import { TokenData } from '@/interfaces/auth.interface';
@@ -80,8 +80,20 @@ class ForgeService {
         });
     }
 
-    public async createWorkItem(ossDownloadUrl: string, ossUploadUrl: string){
+    public async createWorkItem(ossDownloadUrl: string, ossUploadUrl: string, rvtVersion: number){
         return new Promise<WorkItem>(async (resolve, reject) => {
+            console.log(`[Forge] Revit Version: ${rvtVersion}`);
+            let activityId;
+            if(rvtVersion==2020){
+                activityId = FORGE_ACTIVITY_ID_2020;
+            } else if (rvtVersion==2021){
+                activityId = FORGE_ACTIVITY_ID_2021;
+            } else if (rvtVersion==2022){
+                activityId = FORGE_ACTIVITY_ID_2022;
+            } else {
+                activityId = FORGE_ACTIVITY_ID_2022;
+            }
+            console.log(`[Forge] DA Activity ID: ${activityId}`);
             let token = await this.getAccessToken();
             const options = {
                 headers: {
@@ -91,7 +103,7 @@ class ForgeService {
                 }
             };
             const body = {
-                activityId: FORGE_ACTIVITY_ID,
+                activityId: activityId,
                 arguments: {
                     rvtFile: {
                         url: ossDownloadUrl

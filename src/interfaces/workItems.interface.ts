@@ -16,6 +16,7 @@ export interface DaWorkItem {
 export interface WorkItem {
   _id?: string;
   email?: string;
+  rvtVersion?: number;
   daWorkItemId: string;
   daWorkItem: DaWorkItem;
   createdAt?: Date;

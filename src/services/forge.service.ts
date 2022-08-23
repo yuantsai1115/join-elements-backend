@@ -114,6 +114,8 @@ class ForgeService {
                     }
                 }
             };
+            console.log(`[Forge] create workitems url: ${`${FORGE_DAS_API_ROOT}/workitems`}`);
+            console.log(body);
             let { data } = await axios.post(`${FORGE_DAS_API_ROOT}/workitems`, body, options);
             console.log("[Forge] create a work item succeed");
             console.log(data);

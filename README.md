@@ -20,3 +20,4 @@ Elements in the BIM model normally have conflicts to each other during the model
 Main branch is deployed to https://join-elements.netlify.app/.
 
 ## Project Setup
+This service is powered by Autodesk Design Automation APIs. As these APIs are continuously updating, please refer to Autodesk Design Automation page for setting up the project. https://www.autodesk.com/solutions/design-automation

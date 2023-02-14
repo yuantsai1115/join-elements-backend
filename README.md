@@ -14,7 +14,7 @@ Elements in the BIM model normally have conflicts to each other during the model
 | *Before joining the elements* | *After joining the elements* |
 
 ## System Mechanism
-
+<img src="https://user-images.githubusercontent.com/119405090/218627928-3707dd80-ad92-40b0-a2a5-508f34d6de17.jpg" width="400">
 
 ## Live Demo
 Main branch is deployed to https://join-elements.netlify.app/.
